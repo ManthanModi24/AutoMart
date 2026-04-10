@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMart | Premium Luxury Vehicles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">AutoMart</span>
+      </div>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="cars.html" class="nav-link">Inventory</a>
+        <a href="compare.html" class="nav-link">Compare Cars</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-controls">
+        <div class="theme-toggle" onclick="toggleTheme()" title="Alt + T">
+          <span class="theme-icon">🌙</span>
+        </div>
+        <button class="cta-button" onclick="document.querySelector('.showcase').scrollIntoView({behavior: 'smooth'})">Browse Cars</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Video Background -->
+  <section class="hero">
+    <div class="hero-background">
+      <video class="hero-video" muted playsinline>
+        <source src="background.mp4" type="video/mp4">
+      </video>
+      <div class="hero-gradient"></div>
+    </div>
+    
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="hero-word">Discover</span>
+          <span class="hero-word">Automotive</span>
+          <span class="hero-word">Excellence</span>
+        </h1>
+        <p class="hero-subtitle">Explore the finest collection of premium vehicles</p>
+      </div>
+      
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Vehicles</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Brands</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">4.9★</span>
+          <span class="stat-label">Reviews</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll to explore</span>
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Showcase Section -->
+  <section class="showcase">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Vehicles</h2>
+        <p>Explore our curated collection of premium automobiles</p>
+      </div>
+
+      <div class="showcase-grid">
+        <div class="showcase-card" style="--index: 0">
+          <div class="showcase-image">
+            <img src="https://stimg.cardekho.com/images/car-images/930x620/BMW/M4-Competition/11702/1725007288521/222_Black-Sapphire-metallic_070707.jpg" alt="BMW M4">
+            <div class="showcase-badge">Featured</div>
+            <div class="showcase-overlay">
+              <button class="view-btn">View Details</button>
+            </div>
+          </div>
+          <div class="showcase-info">
+            <h3>BMW M4</h3>
+            <p class="model-year">2024 | High Performance</p>
+            <div class="price-badge">₹85,00,000</div>
+            <div class="specs">
+              <span class="spec">550 HP</span>
+              <span class="spec">3.8s 0-100</span>
+              <span class="spec">303 km/h</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-card" style="--index: 1">
+          <div class="showcase-image">
+            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/A6/10551/1757140056684/front-left-side-47.jpg?tr=w-664" alt="Audi A6">
+            <div class="showcase-badge">New Arrival</div>
+            <div class="showcase-overlay">
+              <button class="view-btn">View Details</button>
+            </div>
+          </div>
+          <div class="showcase-info">
+            <h3>Audi A6</h3>
+            <p class="model-year">2024 | Executive Luxury</p>
+            <div class="price-badge">₹55,00,000</div>
+            <div class="specs">
+              <span class="spec">340 HP</span>
+              <span class="spec">5.1s 0-100</span>
+              <span class="spec">250 km/h</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-card" style="--index: 2">
+          <div class="showcase-image">
+            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/C-Class/10858/1755843786675/front-left-side-47.jpg?tr=w-664" alt="Mercedes C-Class">
+            <div class="showcase-badge">Popular</div>
+            <div class="showcase-overlay">
+              <button class="view-btn">View Details</button>
+            </div>
+          </div>
+          <div class="showcase-info">
+            <h3>Mercedes C-Class</h3>
+            <p class="model-year">2024 | German Engineering</p>
+            <div class="price-badge">₹60,00,000</div>
+            <div class="specs">
+              <span class="spec">258 HP</span>
+              <span class="spec">5.7s 0-100</span>
+              <span class="spec">240 km/h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Choose AutoMart</h2>
+        <p>Unmatched quality and service excellence</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card" style="--index: 0">
+          <div class="feature-icon">🔐</div>
+          <h3>Verified Authenticity</h3>
+          <p>Every vehicle undergoes rigorous inspection and certification</p>
+          <div class="feature-line"></div>
+        </div>
+
+        <div class="feature-card" style="--index: 1">
+          <div class="feature-icon">💎</div>
+          <h3>Premium Selection</h3>
+          <p>Curated collection of luxury and performance vehicles</p>
+          <div class="feature-line"></div>
+        </div>
+
+        <div class="feature-card" style="--index: 2">
+          <div class="feature-icon">⚡</div>
+          <h3>Seamless Process</h3>
+          <p>Quick transactions with white-glove service</p>
+          <div class="feature-line"></div>
+        </div>
+
+        <div class="feature-card" style="--index: 3">
+          <div class="feature-icon">🌍</div>
+          <h3>Global Network</h3>
+          <p>International shipping and logistics support</p>
+          <div class="feature-line"></div>
+        </div>
+
+        <div class="feature-card" style="--index: 4">
+          <div class="feature-icon">🛡️</div>
+          <h3>Warranty Coverage</h3>
+          <p>Extended warranty and protection plans available</p>
+          <div class="feature-line"></div>
+        </div>
+
+        <div class="feature-card" style="--index: 5">
+          <div class="feature-icon">🎯</div>
+          <h3>24/7 Support</h3>
+          <p>Dedicated customer support team always ready</p>
+          <div class="feature-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Counter Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="counter-grid">
+        <div class="counter-card">
+          <div class="counter-value" data-target="50000">0</div>
+          <div class="counter-label">Happy Customers</div>
+        </div>
+        <div class="counter-card">
+          <div class="counter-value" data-target="500">0</div>
+          <div class="counter-label">Vehicles Listed</div>
+        </div>
+        <div class="counter-card">
+          <div class="counter-value" data-target="98">0</div>
+          <div class="counter-label">Success Rate %</div>
+        </div>
+        <div class="counter-card">
+          <div class="counter-value" data-target="15">0</div>
+          <div class="counter-label">Years Experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to Find Your Dream Vehicle?</h2>
+      <p>Browse our exclusive collection and get behind the wheel of excellence</p>
+      <button class="btn btn-primary btn-large">Start Exploring Now</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>AutoMart</h4>
+          <p>Premium luxury automotive platform for discerning enthusiasts.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>📍 Mumbai, India</p>
+          <p>📞 +91 98765 43210</p>
+          <p>✉️ hello@automart.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 AutoMart. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

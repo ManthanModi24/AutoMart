@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | AutoMart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">AutoMart</span>
+      </div>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="cars.html" class="nav-link">Inventory</a>
+        <a href="compare.html" class="nav-link">Compare Cars</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="header-controls">
+        <div class="theme-toggle" onclick="toggleTheme()" title="Alt + T">
+          <span class="theme-icon">🌙</span>
+        </div>
+        <button class="cta-button" onclick="document.location='cars.html'">Browse Cars</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <h1>Get In Touch</h1>
+    <p>Questions about our vehicles? We'd love to hear from you</p>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Contact Information</h2>
+          <div class="info-box">
+            <h3>📍 Location</h3>
+            <p>123 Luxury Avenue<br>Mumbai, Maharashtra 400001<br>India</p>
+          </div>
+          <div class="info-box">
+            <h3>📞 Phone</h3>
+            <p>+91 98765 43210<br>+91 98765 43211</p>
+          </div>
+          <div class="info-box">
+            <h3>✉️ Email</h3>
+            <p>hello@automart.com<br>support@automart.com</p>
+          </div>
+          <div class="info-box">
+            <h3>⏰ Hours</h3>
+            <p>Monday - Saturday: 10AM - 8PM<br>Sunday: 11AM - 7PM</p>
+          </div>
+        </div>
+
+        <form class="contact-form">
+          <h2>Send Us Your Inquiry</h2>
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" placeholder="Your Phone">
+          </div>
+          <div class="form-group">
+            <select required>
+              <option value="">Select Subject</option>
+              <option>Vehicle Information</option>
+              <option>General Question</option>
+              <option>Feedback</option>
+              <option>Partnership</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>AutoMart</h4>
+          <p>Premium luxury automotive platform for discerning enthusiasts.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>📍 Mumbai, India</p>
+          <p>📞 +91 98765 43210</p>
+          <p>✉️ hello@automart.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 AutoMart. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

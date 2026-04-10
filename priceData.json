@@ -1,0 +1,270 @@
+{
+  "_comment": "Base MSRP data used for price estimation when API MSRP is unavailable",
+  "_note": "Prices are in USD. The server uses these as fallback base prices.",
+
+  "Toyota": {
+    "Camry":     { "base_msrp": 28400, "category": "sedan" },
+    "Corolla":   { "base_msrp": 22050, "category": "sedan" },
+    "RAV4":      { "base_msrp": 29790, "category": "suv" },
+    "Highlander":{ "base_msrp": 39520, "category": "suv" },
+    "Tacoma":    { "base_msrp": 31500, "category": "truck" },
+    "Tundra":    { "base_msrp": 39965, "category": "truck" },
+    "Prius":     { "base_msrp": 28545, "category": "sedan" },
+    "Supra":     { "base_msrp": 44340, "category": "sports" },
+    "4Runner":   { "base_msrp": 40770, "category": "suv" },
+    "Avalon":    { "base_msrp": 38340, "category": "sedan" },
+    "C-HR":      { "base_msrp": 23505, "category": "suv" },
+    "86":        { "base_msrp": 29300, "category": "sports" },
+    "Sequoia":   { "base_msrp": 60900, "category": "suv" },
+    "Sienna":    { "base_msrp": 36890, "category": "van" },
+    "Venza":     { "base_msrp": 34790, "category": "suv" }
+  },
+
+  "Honda": {
+    "Civic":     { "base_msrp": 24650, "category": "sedan" },
+    "Accord":    { "base_msrp": 28990, "category": "sedan" },
+    "CR-V":      { "base_msrp": 30750, "category": "suv" },
+    "Pilot":     { "base_msrp": 39150, "category": "suv" },
+    "HR-V":      { "base_msrp": 24490, "category": "suv" },
+    "Odyssey":   { "base_msrp": 38410, "category": "van" },
+    "Ridgeline": { "base_msrp": 40450, "category": "truck" },
+    "Passport":  { "base_msrp": 40370, "category": "suv" },
+    "Fit":       { "base_msrp": 17120, "category": "sedan" },
+    "Insight":   { "base_msrp": 26790, "category": "sedan" }
+  },
+
+  "Ford": {
+    "F-150":     { "base_msrp": 36965, "category": "truck" },
+    "Mustang":   { "base_msrp": 30920, "category": "sports" },
+    "Explorer":  { "base_msrp": 38355, "category": "suv" },
+    "Escape":    { "base_msrp": 29900, "category": "suv" },
+    "Ranger":    { "base_msrp": 32990, "category": "truck" },
+    "Edge":      { "base_msrp": 38700, "category": "suv" },
+    "Bronco":    { "base_msrp": 36895, "category": "suv" },
+    "Maverick":  { "base_msrp": 24190, "category": "truck" },
+    "Expedition":{ "base_msrp": 58250, "category": "suv" },
+    "Fusion":    { "base_msrp": 24325, "category": "sedan" }
+  },
+
+  "Chevrolet": {
+    "Silverado": { "base_msrp": 37645, "category": "truck" },
+    "Camaro":    { "base_msrp": 28400, "category": "sports" },
+    "Corvette":  { "base_msrp": 65900, "category": "sports" },
+    "Equinox":   { "base_msrp": 28400, "category": "suv" },
+    "Malibu":    { "base_msrp": 25100, "category": "sedan" },
+    "Tahoe":     { "base_msrp": 57200, "category": "suv" },
+    "Traverse":  { "base_msrp": 36100, "category": "suv" },
+    "Blazer":    { "base_msrp": 37645, "category": "suv" },
+    "Colorado":  { "base_msrp": 29200, "category": "truck" },
+    "Suburban":  { "base_msrp": 59500, "category": "suv" }
+  },
+
+  "BMW": {
+    "3 Series":  { "base_msrp": 44450, "category": "sedan" },
+    "5 Series":  { "base_msrp": 57200, "category": "sedan" },
+    "X3":        { "base_msrp": 48150, "category": "suv" },
+    "X5":        { "base_msrp": 63200, "category": "suv" },
+    "M4":        { "base_msrp": 76900, "category": "sports" },
+    "7 Series":  { "base_msrp": 97700, "category": "sedan" },
+    "X1":        { "base_msrp": 40200, "category": "suv" },
+    "4 Series":  { "base_msrp": 50600, "category": "sports" },
+    "M3":        { "base_msrp": 76400, "category": "sports" },
+    "Z4":        { "base_msrp": 54600, "category": "sports" }
+  },
+
+  "Mercedes-Benz": {
+    "C-Class":   { "base_msrp": 47800, "category": "sedan" },
+    "E-Class":   { "base_msrp": 58050, "category": "sedan" },
+    "S-Class":   { "base_msrp": 117300, "category": "sedan" },
+    "GLC":       { "base_msrp": 48950, "category": "suv" },
+    "GLE":       { "base_msrp": 60850, "category": "suv" },
+    "A-Class":   { "base_msrp": 35500, "category": "sedan" },
+    "CLA":       { "base_msrp": 40050, "category": "sedan" },
+    "GLA":       { "base_msrp": 39900, "category": "suv" },
+    "AMG GT":    { "base_msrp": 141900, "category": "sports" }
+  },
+
+  "Audi": {
+    "A4":        { "base_msrp": 42000, "category": "sedan" },
+    "A6":        { "base_msrp": 58900, "category": "sedan" },
+    "Q5":        { "base_msrp": 46200, "category": "suv" },
+    "Q7":        { "base_msrp": 59900, "category": "suv" },
+    "A3":        { "base_msrp": 37400, "category": "sedan" },
+    "Q3":        { "base_msrp": 39400, "category": "suv" },
+    "A5":        { "base_msrp": 45900, "category": "sports" },
+    "A8":        { "base_msrp": 88900, "category": "sedan" },
+    "e-tron GT": { "base_msrp": 106500, "category": "sports" },
+    "R8":        { "base_msrp": 158600, "category": "sports" }
+  },
+
+  "Tesla": {
+    "Model 3":   { "base_msrp": 40240, "category": "sedan" },
+    "Model Y":   { "base_msrp": 44990, "category": "suv" },
+    "Model S":   { "base_msrp": 79990, "category": "sedan" },
+    "Model X":   { "base_msrp": 84990, "category": "suv" }
+  },
+
+  "Hyundai": {
+    "Elantra":   { "base_msrp": 22865, "category": "sedan" },
+    "Tucson":    { "base_msrp": 30285, "category": "suv" },
+    "Sonata":    { "base_msrp": 28685, "category": "sedan" },
+    "Santa Fe":  { "base_msrp": 34345, "category": "suv" },
+    "Kona":      { "base_msrp": 24700, "category": "suv" },
+    "Palisade":  { "base_msrp": 37500, "category": "suv" },
+    "Ioniq 5":   { "base_msrp": 42735, "category": "suv" },
+    "Venue":     { "base_msrp": 20665, "category": "suv" }
+  },
+
+  "Kia": {
+    "Forte":     { "base_msrp": 20415, "category": "sedan" },
+    "Seltos":    { "base_msrp": 24490, "category": "suv" },
+    "Sportage":  { "base_msrp": 30990, "category": "suv" },
+    "Telluride": { "base_msrp": 37090, "category": "suv" },
+    "K5":        { "base_msrp": 28090, "category": "sedan" },
+    "Sorento":   { "base_msrp": 32890, "category": "suv" },
+    "Soul":      { "base_msrp": 20690, "category": "suv" },
+    "EV6":       { "base_msrp": 43350, "category": "suv" }
+  },
+
+  "Nissan": {
+    "Altima":    { "base_msrp": 28190, "category": "sedan" },
+    "Rogue":     { "base_msrp": 30290, "category": "suv" },
+    "Sentra":    { "base_msrp": 21580, "category": "sedan" },
+    "Pathfinder":{ "base_msrp": 36310, "category": "suv" },
+    "Frontier":  { "base_msrp": 31280, "category": "truck" },
+    "Maxima":    { "base_msrp": 38140, "category": "sedan" },
+    "370Z":      { "base_msrp": 31090, "category": "sports" },
+    "GT-R":      { "base_msrp": 118990, "category": "sports" },
+    "Kicks":     { "base_msrp": 21760, "category": "suv" },
+    "Leaf":      { "base_msrp": 29160, "category": "sedan" }
+  },
+
+  "Subaru": {
+    "Outback":   { "base_msrp": 30895, "category": "suv" },
+    "Forester":  { "base_msrp": 33095, "category": "suv" },
+    "Crosstrek": { "base_msrp": 26290, "category": "suv" },
+    "Impreza":   { "base_msrp": 24295, "category": "sedan" },
+    "WRX":       { "base_msrp": 31235, "category": "sports" },
+    "Legacy":    { "base_msrp": 25175, "category": "sedan" },
+    "Ascent":    { "base_msrp": 36395, "category": "suv" },
+    "BRZ":       { "base_msrp": 30675, "category": "sports" }
+  },
+
+  "Volkswagen": {
+    "Jetta":     { "base_msrp": 23420, "category": "sedan" },
+    "Tiguan":    { "base_msrp": 30435, "category": "suv" },
+    "Atlas":     { "base_msrp": 38275, "category": "suv" },
+    "Golf":      { "base_msrp": 31790, "category": "sedan" },
+    "Passat":    { "base_msrp": 24940, "category": "sedan" },
+    "ID.4":      { "base_msrp": 39735, "category": "suv" },
+    "Taos":      { "base_msrp": 24790, "category": "suv" }
+  },
+
+  "Mazda": {
+    "Mazda3":    { "base_msrp": 24070, "category": "sedan" },
+    "CX-5":     { "base_msrp": 29930, "category": "suv" },
+    "CX-50":    { "base_msrp": 31240, "category": "suv" },
+    "CX-9":     { "base_msrp": 39595, "category": "suv" },
+    "MX-5 Miata":{ "base_msrp": 28975, "category": "sports" },
+    "CX-30":    { "base_msrp": 24325, "category": "suv" }
+  },
+
+  "Porsche": {
+    "911":       { "base_msrp": 115300, "category": "sports" },
+    "Cayenne":   { "base_msrp": 76850, "category": "suv" },
+    "Macan":     { "base_msrp": 62950, "category": "suv" },
+    "Panamera":  { "base_msrp": 99400, "category": "sedan" },
+    "Taycan":    { "base_msrp": 92150, "category": "sports" },
+    "718 Boxster":{ "base_msrp": 68400, "category": "sports" },
+    "718 Cayman": { "base_msrp": 65400, "category": "sports" }
+  },
+
+  "Jeep": {
+    "Wrangler":  { "base_msrp": 33890, "category": "suv" },
+    "Grand Cherokee":{ "base_msrp": 40935, "category": "suv" },
+    "Cherokee":  { "base_msrp": 36295, "category": "suv" },
+    "Compass":   { "base_msrp": 30895, "category": "suv" },
+    "Gladiator": { "base_msrp": 38690, "category": "truck" },
+    "Renegade":  { "base_msrp": 25640, "category": "suv" }
+  },
+
+  "Dodge": {
+    "Charger":   { "base_msrp": 33690, "category": "sedan" },
+    "Challenger":{ "base_msrp": 33595, "category": "sports" },
+    "Durango":   { "base_msrp": 40995, "category": "suv" },
+    "Hornet":    { "base_msrp": 33540, "category": "suv" }
+  },
+
+  "Lexus": {
+    "RX":        { "base_msrp": 50600, "category": "suv" },
+    "ES":        { "base_msrp": 42490, "category": "sedan" },
+    "NX":        { "base_msrp": 42125, "category": "suv" },
+    "IS":        { "base_msrp": 41450, "category": "sedan" },
+    "GX":        { "base_msrp": 65415, "category": "suv" },
+    "LC":        { "base_msrp": 99600, "category": "sports" },
+    "LS":        { "base_msrp": 80600, "category": "sedan" },
+    "RC":        { "base_msrp": 45750, "category": "sports" }
+  },
+
+  "Volvo": {
+    "XC90":      { "base_msrp": 58645, "category": "suv" },
+    "XC60":      { "base_msrp": 45550, "category": "suv" },
+    "XC40":      { "base_msrp": 39700, "category": "suv" },
+    "S60":       { "base_msrp": 42550, "category": "sedan" },
+    "S90":       { "base_msrp": 56695, "category": "sedan" }
+  },
+
+  "Ferrari": {
+    "812 GTS":       { "base_msrp": 363730, "category": "sports" },
+    "812 Superfast":  { "base_msrp": 340000, "category": "sports" },
+    "SF90 Stradale": { "base_msrp": 524815, "category": "sports" },
+    "F8 Tributo":    { "base_msrp": 280000, "category": "sports" },
+    "Roma":          { "base_msrp": 222620, "category": "sports" },
+    "296 GTB":       { "base_msrp": 352000, "category": "sports" },
+    "Portofino M":   { "base_msrp": 245000, "category": "sports" },
+    "488 GTB":       { "base_msrp": 262647, "category": "sports" },
+    "LaFerrari":     { "base_msrp": 1416362, "category": "sports" }
+  },
+
+  "Lamborghini": {
+    "Huracán":       { "base_msrp": 208571, "category": "sports" },
+    "Aventador":     { "base_msrp": 417826, "category": "sports" },
+    "Urus":          { "base_msrp": 225000, "category": "suv" },
+    "Revuelto":      { "base_msrp": 608358, "category": "sports" }
+  },
+
+  "Bugatti": {
+    "Chiron":        { "base_msrp": 3000000, "category": "sports" },
+    "Divo":          { "base_msrp": 5800000, "category": "sports" },
+    "Veyron":        { "base_msrp": 1700000, "category": "sports" },
+    "Centodieci":    { "base_msrp": 9000000, "category": "sports" },
+    "Bolide":        { "base_msrp": 4700000, "category": "sports" },
+    "Mistral":       { "base_msrp": 5000000, "category": "sports" }
+  },
+
+  "McLaren": {
+    "720S":          { "base_msrp": 299000, "category": "sports" },
+    "765LT":         { "base_msrp": 382500, "category": "sports" },
+    "Artura":        { "base_msrp": 237500, "category": "sports" },
+    "GT":            { "base_msrp": 210000, "category": "sports" }
+  },
+
+  "_defaults": {
+    "sedan":  { "base_msrp": 30000 },
+    "suv":    { "base_msrp": 38000 },
+    "truck":  { "base_msrp": 35000 },
+    "sports": { "base_msrp": 50000 },
+    "van":    { "base_msrp": 35000 },
+    "luxury_sedan": { "base_msrp": 55000 },
+    "luxury_suv":   { "base_msrp": 70000 },
+    "unknown":      { "base_msrp": 32000 }
+  },
+
+  "_luxury_brands": [
+    "BMW", "Mercedes-Benz", "Audi", "Lexus", "Porsche", "Volvo",
+    "Jaguar", "Land Rover", "Maserati", "Bentley", "Rolls-Royce",
+    "Ferrari", "Lamborghini", "McLaren", "Aston Martin", "Genesis",
+    "Infiniti", "Acura", "Lincoln", "Cadillac", "Alfa Romeo", "Lotus",
+    "Bugatti", "Pagani", "Tesla"
+  ]
+}

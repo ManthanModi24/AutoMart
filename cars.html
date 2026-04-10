@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory | AutoMart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">AutoMart</span>
+      </div>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="cars.html" class="nav-link active">Inventory</a>
+        <a href="compare.html" class="nav-link">Compare Cars</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-controls">
+        <div class="theme-toggle" onclick="toggleTheme()" title="Alt + T">
+          <span class="theme-icon">🌙</span>
+        </div>
+        <button class="cta-button" onclick="document.querySelector('.inventory-grid').scrollIntoView({behavior: 'smooth'})">Explore</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <h1>Our Vehicle Collection</h1>
+    <p>Discover detailed specifications and information about our premium vehicles</p>
+  </section>
+
+  <!-- Car Search Section (API-Powered) -->
+  <section class="car-search-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Search Vehicle Specs & Pricing</h2>
+        <p>Look up any car's details and estimated price — powered by CarAPI.app</p>
+      </div>
+
+      <form id="carSearchForm" class="car-search-form" autocomplete="off">
+        <div class="search-row">
+          <div class="search-field">
+            <label for="searchMake">Company</label>
+            <select id="searchMake" required>
+              <option value="">Select Company</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="searchModel">Model</label>
+            <select id="searchModel" required disabled>
+              <option value="">Select Model</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="searchYear">Year <span style="font-weight:400;opacity:0.6;">(optional)</span></label>
+            <select id="searchYear">
+              <option value="">All Years</option>
+            </select>
+          </div>
+          <div class="search-field search-btn-field">
+            <button type="submit" class="btn btn-primary search-btn" id="searchBtn">
+              <span class="search-btn-text">Search</span>
+              <span class="search-btn-loader" style="display:none;">
+                <span class="spinner"></span> Searching...
+              </span>
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Search Results Area -->
+      <div id="searchResults" class="search-results" style="display:none;"></div>
+
+      <!-- Error Display Area -->
+      <div id="searchError" class="search-error" style="display:none;"></div>
+    </div>
+  </section>
+
+  <section class="inventory-section">
+    <div class="container">
+
+      <div class="inventory-grid">
+        <div class="vehicle-card" style="--index: 0">
+          <div class="vehicle-image">
+            <img src="https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/M4-CS/12143/1762778950933/front-left-side-47.jpg" alt="BMW M4">
+            <div class="vehicle-badge">Featured</div>
+          </div>
+          <div class="vehicle-details">
+            <h3>BMW M4</h3>
+            <p class="year">2024 Model</p>
+            <div class="specs-row">
+              <span>550 HP</span>
+              <span>3.8s</span>
+              <span>Manual</span>
+            </div>
+            <div class="vehicle-footer">
+              <span>2024 Model</span>
+              <button class=\"btn-small\">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-card" style="--index: 1">
+          <div class="vehicle-image">
+            <img src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Audi/A6/10551/1757140056684/front-left-side-47.jpg" alt="Audi A6">
+            <div class="vehicle-badge">New</div>
+          </div>
+          <div class="vehicle-details">
+            <h3>Audi A6</h3>
+            <p class="year">2024 Model</p>
+            <div class="specs-row">
+              <span>340 HP</span>
+              <span>5.1s</span>
+              <span>Auto</span>
+            </div>
+            <div class="vehicle-footer">
+              <span class="price">₹55,00,000</span>
+              <button class="btn-small">View</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-card" style="--index: 2">
+          <div class="vehicle-image">
+            <img src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Mercedes-Benz/C-Class/10858/1755843786675/front-left-side-47.jpg" alt="Mercedes C-Class">
+            <div class="vehicle-badge">Popular</div>
+          </div>
+          <div class="vehicle-details">
+            <h3>Mercedes C-Class</h3>
+            <p class="year">2024 Model</p>
+            <div class="specs-row">
+              <span>258 HP</span>
+              <span>5.7s</span>
+              <span>Auto</span>
+            </div>
+            <div class="vehicle-footer">
+              <span class="price">₹60,00,000</span>
+              <button class="btn-small">View</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-card" style="--index: 3">
+          <div class="vehicle-image">
+            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Tesla/Model-S/5252/1752499273852/front-left-side-47.jpg?tr=w-664" alt="Tesla Model S">
+          </div>
+          <div class="vehicle-details">
+            <h3>Tesla Model S</h3>
+            <p class="year">2024 Model</p>
+            <div class="specs-row">
+              <span>670 HP</span>
+              <span>2.3s</span>
+              <span>Electric</span>
+            </div>
+            <div class="vehicle-footer">
+              <span class="price">₹95,00,000</span>
+              <button class="btn-small">View</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-card" style="--index: 4">
+          <div class="vehicle-image">
+            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/X5/10452/1762779994999/front-left-side-47.jpg?tr=w-664" alt="BMW X5">
+          </div>
+          <div class="vehicle-details">
+            <h3>BMW X5</h3>
+            <p class="year">2024 Model</p>
+            <div class="specs-row">
+              <span>625 HP</span>
+              <span>3.6s</span>
+              <span>Auto</span>
+            </div>
+            <div class="vehicle-footer">
+              <span class="price">₹85,00,000</span>
+              <button class="btn-small">View</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-card" style="--index: 5">
+          <div class="vehicle-image">
+            <img src="https://stimg.cardekho.com/images/car-images/930x620/Porsche/911/11757/1762934841192/Jet-Black-Metallic_1a1d22.jpg" alt="Porsche 911">
+          </div>
+          <div class="vehicle-details">
+            <h3>Porsche 911</h3>
+            <p class="year">2024 Model</p>
+            <div class="specs-row">
+              <span>510 HP</span>
+              <span>3.2s</span>
+              <span>Manual</span>
+            </div>
+            <div class="vehicle-footer">
+              <span class="price">₹1,85,00,000</span>
+              <button class="btn-small">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>AutoMart</h4>
+          <p>Premium luxury automotive platform for discerning enthusiasts.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>� Mumbai, India</p>
+          <p>📞 +91 98765 43210</p>
+          <p>✉️ hello@automart.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 AutoMart. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Cars | AutoMart</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="compare.css">
+</head>
+<body>
+  <div id="globalLoader" class="global-loader active" aria-live="polite" aria-busy="true">
+    <div class="global-loader-card">
+      <div class="global-loader-spinner" aria-hidden="true"></div>
+      <p id="globalLoaderText">Fetching latest car data...</p>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">AutoMart</span>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="cars.html" class="nav-link">Inventory</a>
+        <a href="compare.html" class="nav-link active">Compare Cars</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-controls">
+        <div class="theme-toggle" onclick="toggleTheme()" title="Alt + T">
+          <span class="theme-icon">🌙</span>
+        </div>
+        <button class="cta-button" onclick="document.querySelector('.compare-section').scrollIntoView({behavior: 'smooth'})">Start Comparing</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <h1>Compare Cars Side by Side</h1>
+    <p>Pick 2 cars and compare specs, pricing, and drivetrain details instantly</p>
+  </section>
+
+  <section class="compare-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Build Your Comparison</h2>
+        <p>Select make, model, and year to compare vehicles from our API-powered inventory data</p>
+      </div>
+
+      <div class="compare-controls-wrap">
+        <div id="compareSelectors" class="compare-selectors"></div>
+        <div class="compare-actions">
+          <button id="resetComparison" class="btn btn-primary">Reset Comparison</button>
+        </div>
+      </div>
+
+      <div id="comparePlaceholder" class="compare-placeholder">
+        <div class="placeholder-icon">🚗</div>
+        <h3>No cars selected yet</h3>
+        <p>Use the dropdowns above to add cars and see a side-by-side comparison table.</p>
+      </div>
+
+      <div id="compareTableWrapper" class="compare-table-wrapper" style="display: none;"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>AutoMart</h4>
+          <p>Premium luxury automotive platform for discerning enthusiasts.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>📍 Mumbai, India</p>
+          <p>📞 +91 98765 43210</p>
+          <p>✉️ hello@automart.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 AutoMart. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="compare.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+/* Compare page styles (inherits theme variables and base typography from style.css) */
+.compare-section {
+  padding: 40px 0 80px;
+}
+
+.global-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 10, 10, 0.82);
+  backdrop-filter: blur(4px);
+}
+
+.global-loader.active {
+  display: flex;
+}
+
+.global-loader-card {
+  min-width: 260px;
+  padding: 24px 28px;
+  border: 1px solid var(--border-dark);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255, 78, 38, 0.12), rgba(0, 212, 255, 0.08));
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.global-loader-spinner {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.18);
+  border-top-color: var(--accent);
+  border-right-color: var(--primary);
+  animation: compareSpin 0.75s linear infinite;
+}
+
+.global-loader-card p {
+  margin: 0;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+@keyframes compareSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.compare-controls-wrap {
+  background: linear-gradient(180deg, rgba(255, 78, 38, 0.08), rgba(0, 212, 255, 0.05));
+  border: 1px solid var(--border-dark);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.compare-selectors {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.compare-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-dark);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.compare-card h3 {
+  font-family: 'Sora', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.compare-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.compare-field label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.compare-field select {
+  width: 100%;
+  background: #000000;
+  border: 1px solid var(--border-dark);
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 10px 12px;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.compare-field select option {
+  background: #000000;
+  color: #ffffff;
+}
+
+.compare-field select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(255, 78, 38, 0.15);
+}
+
+.compare-status {
+  min-height: 20px;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.compare-status.error {
+  color: #ff6b6b;
+}
+
+.compare-actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.compare-placeholder {
+  margin-top: 28px;
+  border: 1px dashed var(--border-dark);
+  border-radius: 16px;
+  text-align: center;
+  padding: 36px 20px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.placeholder-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.compare-placeholder h3 {
+  font-family: 'Sora', sans-serif;
+  margin-bottom: 8px;
+}
+
+.compare-placeholder p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.compare-table-wrapper {
+  margin-top: 24px;
+  border: 1px solid var(--border-dark);
+  border-radius: 16px;
+  overflow: auto;
+  background: rgba(255, 255, 255, 0.02);
+  animation: tableFadeIn 0.35s ease;
+}
+
+.compare-table {
+  width: 100%;
+  min-width: 780px;
+  border-collapse: collapse;
+}
+
+.compare-table th,
+.compare-table td {
+  border-bottom: 1px solid var(--border-dark);
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.compare-table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--bg-dark);
+  z-index: 2;
+}
+
+.compare-table th.spec-col {
+  min-width: 170px;
+  font-family: 'Sora', sans-serif;
+  color: var(--text-secondary);
+}
+
+.compare-table th.car-col {
+  min-width: 210px;
+  font-family: 'Sora', sans-serif;
+}
+
+.car-title {
+  display: block;
+  font-weight: 700;
+}
+
+.car-subtitle {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.compare-cell-diff {
+  background: rgba(255, 78, 38, 0.14);
+  font-weight: 700;
+}
+
+.compare-spec-diff {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+@keyframes tableFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .compare-selectors {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-actions {
+    justify-content: stretch;
+  }
+
+  .compare-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .compare-section {
+    padding: 24px 0 64px;
+  }
+
+  .compare-controls-wrap {
+    padding: 16px;
+  }
+
+  .compare-table-wrapper {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+html.light-mode .compare-card,
+html.light-mode .compare-placeholder,
+html.light-mode .compare-table-wrapper {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+html.light-mode .compare-field select {
+  background: #000000;
+  color: #ffffff;
+}
+
+html.light-mode .car-subtitle,
+html.light-mode .compare-status,
+html.light-mode .compare-placeholder p {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+html.light-mode .compare-cell-diff {
+  background: rgba(230, 57, 70, 0.14);
+}
+
+html.light-mode .global-loader {
+  background: rgba(245, 245, 245, 0.78);
+}
+
+html.light-mode .global-loader-card p {
+  color: #1a1a1a;
+}
